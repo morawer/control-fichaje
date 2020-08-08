@@ -1,0 +1,1 @@
+[Fichaje [apellidos=Morala, codigo=33, fecha=2020-08-08T20:04:00.600950200, nombre=Daniel, tipo=Normal], Fichaje [apellidos=Morawer, codigo=33, fecha=2020-08-08T20:04:45.224126700, nombre=Danielo, tipo=Extra]]
