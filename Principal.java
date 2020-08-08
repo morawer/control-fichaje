@@ -23,6 +23,11 @@ public class Principal {
                     break;
 
                 case 2:
+                    registro(fichajes, sc);
+                    break;
+
+                case 3:
+                    consultarUltimo(fichajes);
 
             }
 
@@ -30,6 +35,11 @@ public class Principal {
 
         sc.close();
 
+    }
+
+    private static void consultarUltimo(ArrayList<Fichaje> fichajes) {
+        int ultimo = fichajes.size() - 1;
+        System.out.println(fichajes.get(ultimo).toString());
     }
 
     private static void registro(ArrayList<Fichaje> fichajes, Scanner sc) {
