@@ -1,7 +1,7 @@
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.io.IOException; 
+import java.io.IOException;
 
 public class Principal {
 
@@ -46,8 +46,6 @@ public class Principal {
 
     private static void registro(ArrayList<Fichaje> fichajes, Scanner sc) {
 
-        
-
         System.out.println("Nombre: ");
         String nombre = sc.next();
 
@@ -64,16 +62,16 @@ public class Principal {
         fichajes.add(fich);
 
         try {
-
-            FileWriter archivo = new FileWriter ("fichajes.txt");
+            
+            FileWriter archivo = new FileWriter("fichajes.txt", true);
             archivo.write(fichajes.toString());
             archivo.close();
 
-        }   catch (IOException e) {
+        } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
-          }
-        
+        }
+
     }
 
     private static void menu() {
