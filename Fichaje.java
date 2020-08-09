@@ -62,9 +62,14 @@ public class Fichaje {
 
     @Override
     public String toString() {
-        return "Fichaje [apellidos=" + apellidos + ", codigo=" + codigo + ", fecha=" + fecha + ", nombre=" + nombre
-                + ", tipo=" + tipo + "]";
-    }
+        return 
+        "\n*FICHAJE: " +
+        "\n-Nombre: " + nombre +
+        "\n-Apellido: " + apellidos +
+        "\n-ID: " + codigo +
+        "\n-Tipo fichaje: " + tipo +
+        "\n-Fecha: " + fecha;
+        }
 
    
 
