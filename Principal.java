@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -5,7 +7,7 @@ import java.io.IOException;
 
 public class Principal {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 
         int opc = 0;
         ArrayList<Fichaje> fichajes = new ArrayList<>();
@@ -30,6 +32,11 @@ public class Principal {
 
                 case 3:
                     consultarUltimo(fichajes);
+                    break;
+
+                case 4:
+                    mostrarHistorial();
+                    break;
 
             }
 
@@ -37,6 +44,21 @@ public class Principal {
 
         sc.close();
 
+    }
+
+    private static void mostrarHistorial() throws FileNotFoundException {
+        File archivo = new File("fichajes.txt");
+
+        if (!archivo.exists()) {
+            System.out.println("El fichero no existe");
+        }
+
+        Scanner lector = new Scanner(archivo);
+        while (lector.hasNext()) {
+            String linea = lector.nextLine();
+            System.out.println(linea);
+        }
+        lector.close();
     }
 
     private static void consultarUltimo(ArrayList<Fichaje> fichajes) {
@@ -62,7 +84,7 @@ public class Principal {
         fichajes.add(fich);
 
         try {
-            
+
             FileWriter archivo = new FileWriter("fichajes.txt", true);
             archivo.write(fichajes.toString());
             archivo.close();
@@ -75,11 +97,11 @@ public class Principal {
     }
 
     private static void menu() {
-        System.out.println("************FICHAJE*************");
+        System.out.println("***************FICHAJE****************");
         System.out.println("1. Registrar entrada.");
         System.out.println("2. Registrar salida.");
         System.out.println("3. Consultar último fichaje.");
-        System.out.println("4. Guardar fichajes.");
+        System.out.println("4. Mostrar historial de fichajes.");
         System.out.println("5. Salir.");
     }
 
