@@ -38,12 +38,26 @@ public class Principal {
                     mostrarHistorial();
                     break;
 
+                case 5:
+                    borrarFichajes();
+                    break;
+
+
             }
 
-        } while (opc != 5);
+        } while (opc != 6);
 
         sc.close();
 
+    }
+
+    private static void borrarFichajes() {
+        File archivo = new File("fichajes.txt");
+
+        if (!archivo.exists()) {
+            System.out.println("El fichero no existe");
+        }
+        archivo.delete();
     }
 
     private static void mostrarHistorial() throws FileNotFoundException {
@@ -102,7 +116,9 @@ public class Principal {
         System.out.println("2. Registrar salida.");
         System.out.println("3. Consultar último fichaje.");
         System.out.println("4. Mostrar historial de fichajes.");
-        System.out.println("5. Salir.");
+        System.out.println("5. Borrar historial.");
+        System.out.println("6. Salir.");
+
     }
 
 }
