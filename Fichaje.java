@@ -1,4 +1,5 @@
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Fichaje {
 
@@ -6,14 +7,18 @@ public class Fichaje {
     private String nombre;
     private String apellidos;
     private int codigo;
-    private LocalDateTime fecha;
+    private LocalDateTime date = LocalDateTime.now();
+    DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern("dd-MM-yyyy hh:MM");
+    private String fecha = date.format(formatoFecha);
+
+    
 
     public Fichaje() {
     }
 
     public Fichaje(String tipo, String nombre, String apellidos, int codigo) {
         this.tipo = tipo;
-        this.fecha = LocalDateTime.now();
+        this.date = LocalDateTime.now(); 
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.codigo = codigo;
@@ -28,11 +33,11 @@ public class Fichaje {
         this.tipo = tipo;
     }
 
-    public LocalDateTime getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(LocalDateTime fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
@@ -68,7 +73,7 @@ public class Fichaje {
         "\n-Apellido: " + apellidos +
         "\n-ID: " + codigo +
         "\n-Tipo fichaje: " + tipo +
-        "\n-Fecha: " + fecha;
+        "\n-Fecha: " + fecha + "\n";
         }
 
    
