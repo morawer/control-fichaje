@@ -8,10 +8,8 @@ public class Fichaje {
     private String apellidos;
     private int codigo;
     private LocalDateTime date = LocalDateTime.now();
-    DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern("dd-MM-yyyy hh:MM");
+    DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
     private String fecha = date.format(formatoFecha);
-
-    
 
     public Fichaje() {
     }
