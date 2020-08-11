@@ -89,7 +89,7 @@ public class Principal {
         String apellidos = sc.next();
 
         System.out.println("Tipo: ");
-        String tipo = sc.next();
+        String tipo = menuTipo(sc);
 
         System.out.println("Código: ");
         int codigo = sc.nextInt();
@@ -108,6 +108,32 @@ public class Principal {
             e.printStackTrace();
         }
 
+    }
+
+    private static String menuTipo(Scanner sc) {
+        String tipo = " ";
+        int opcTipo;
+        do {
+            System.out.println("1. Normal.");
+            System.out.println("2. Horas Extra.");
+            System.out.println("3. Bolsa horaria positiva.");
+
+            System.out.println("Elige una opción:");
+            opcTipo = sc.nextInt();
+
+            switch (opcTipo){
+                case 1:
+                tipo = "Normal";
+                break;
+                case 2:
+                tipo = "Extra";
+                break;
+                case 3:
+                tipo = "Bolsa horaria +";
+                break;
+            }
+        } while (opcTipo == 0|| opcTipo > 3);
+        return tipo;
     }
 
     private static void menu() {
