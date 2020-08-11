@@ -15,7 +15,6 @@ public class Principal {
         Scanner sc = new Scanner(System.in);
 
         do {
-
             menu();
 
             System.out.println("Elige una opción: ");
@@ -41,14 +40,9 @@ public class Principal {
                 case 5:
                     borrarFichajes();
                     break;
-
-
             }
-
         } while (opc != 6);
-
         sc.close();
-
     }
 
     private static void borrarFichajes() {
@@ -98,7 +92,6 @@ public class Principal {
         fichajes.add(fich);
 
         try {
-
             FileWriter archivo = new FileWriter("fichajes.txt", true);
             archivo.write(fichajes.toString());
             archivo.close();
@@ -107,7 +100,6 @@ public class Principal {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
-
     }
 
     private static String menuTipo(Scanner sc) {
@@ -117,7 +109,6 @@ public class Principal {
             System.out.println("1. Normal.");
             System.out.println("2. Horas Extra.");
             System.out.println("3. Bolsa horaria positiva.");
-
             System.out.println("Elige una opción:");
             opcTipo = sc.nextInt();
 
