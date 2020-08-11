@@ -1,1 +1,22 @@
-[Fichaje [apellidos=Morala, codigo=33, fecha=2020-08-08T20:04:00.600950200, nombre=Daniel, tipo=Normal], Fichaje [apellidos=Morawer, codigo=33, fecha=2020-08-08T20:04:45.224126700, nombre=Danielo, tipo=Extra]]
+[
+*FICHAJE: 
+-Nombre: Daniel
+-Apellido: Morala
+-ID: 33
+-Tipo fichaje: Normal
+-Fecha: 11-08-2020 07:08
+][
+*FICHAJE: 
+-Nombre: Daniel
+-Apellido: Morawer
+-ID: 33
+-Tipo fichaje: Normal
+-Fecha: 11-08-2020 19:09
+][
+*FICHAJE: 
+-Nombre: fyuuy
+-Apellido: jpojp
+-ID: 88
+-Tipo fichaje: Extra
+-Fecha: 11-08-2020 19:47
+]
