@@ -30,7 +30,7 @@ public class Principal {
                     break;
 
                 case 3:
-                    consultarUltimo(fichajes);
+                    System.out.println(consultarUltimo(fichajes));
                     break;
 
                 case 4:
@@ -69,9 +69,9 @@ public class Principal {
         lector.close();
     }
 
-    private static void consultarUltimo(ArrayList<Fichaje> fichajes) {
+    private static String consultarUltimo(ArrayList<Fichaje> fichajes) {
         int ultimo = fichajes.size() - 1;
-        System.out.println(fichajes.get(ultimo).toString());
+        return fichajes.get(ultimo).toString();
     }
 
     private static void registro(ArrayList<Fichaje> fichajes, Scanner sc) {
@@ -93,7 +93,7 @@ public class Principal {
 
         try {
             FileWriter archivo = new FileWriter("fichajes.txt", true);
-            archivo.write(fichajes.toString());
+            archivo.write(consultarUltimo(fichajes));
             archivo.close();
 
         } catch (IOException e) {
