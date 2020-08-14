@@ -106,24 +106,36 @@ public class Principal {
         String tipo = " ";
         int opcTipo;
         do {
-            System.out.println("1. Normal.");
-            System.out.println("2. Horas Extra.");
-            System.out.println("3. Bolsa horaria positiva.");
+            System.out.println("1. Normal entrada.");
+            System.out.println("2. Normal salida.");
+            System.out.println("3. Horas Extra entrada.");
+            System.out.println("4. Horas Extra salida.");
+            System.out.println("5. Bolsa horaria positiva entrada.");
+            System.out.println("6. Bolsa horaria positiva salida.");
             System.out.println("Elige una opción:");
             opcTipo = sc.nextInt();
 
             switch (opcTipo){
                 case 1:
-                tipo = "Normal";
+                tipo = "Normal entrada.";
                 break;
                 case 2:
-                tipo = "Extra";
+                tipo = "Normal salida.";
                 break;
                 case 3:
-                tipo = "Bolsa horaria +";
+                tipo = "Extra entrada.";
+                break;
+                case 4:
+                tipo = "Extra salida.";
+                break;
+                case 5:
+                tipo = "Bolsa horaria + entrada.";
+                break;
+                case 6:
+                tipo = "Bolsa horaria + salida";
                 break;
             }
-        } while (opcTipo == 0|| opcTipo > 3);
+        } while (opcTipo == 0|| opcTipo > 6);
         return tipo;
     }
 
