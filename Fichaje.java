@@ -63,6 +63,8 @@ public class Fichaje {
         this.codigo = codigo;
     }
 
+
+    //Función toString modificada estéticamente.
     @Override
     public String toString() {
         return 

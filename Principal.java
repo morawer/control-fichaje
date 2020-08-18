@@ -45,6 +45,7 @@ public class Principal {
         sc.close();
     }
 
+    // Función para borrar el archivo fichajes.txt.
     private static void borrarFichajes() {
         File archivo = new File("fichajes.txt");
 
@@ -54,6 +55,7 @@ public class Principal {
         archivo.delete();
     }
 
+    // Función para mostrar el historial de fichajes.
     private static void mostrarHistorial() throws FileNotFoundException {
         File archivo = new File("fichajes.txt");
 
@@ -69,11 +71,20 @@ public class Principal {
         lector.close();
     }
 
+    /*
+     * Función para consultar el último fichaje. Para ello, se imprime por pantalla
+     * el último dato del ArrayList.
+     */
     private static String consultarUltimo(ArrayList<Fichaje> fichajes) {
         int ultimo = fichajes.size() - 1;
         return fichajes.get(ultimo).toString();
     }
 
+    /*
+     * Función para el registro de fichajes. Cada registro es añadido a una
+     * ArrayList para luego escribirse fichaje tras fichaje al archivo de texto
+     * fichajes.txt.
+     */
     private static void registro(ArrayList<Fichaje> fichajes, Scanner sc) {
 
         System.out.println("Nombre: ");
@@ -102,6 +113,7 @@ public class Principal {
         }
     }
 
+    // Función para poder elegir el tipo de fichaje.
     private static String menuTipo(Scanner sc) {
         String tipo = " ";
         int opcTipo;
@@ -115,30 +127,31 @@ public class Principal {
             System.out.println("Elige una opción:");
             opcTipo = sc.nextInt();
 
-            switch (opcTipo){
+            switch (opcTipo) {
                 case 1:
-                tipo = "Normal entrada.";
-                break;
+                    tipo = "Normal entrada.";
+                    break;
                 case 2:
-                tipo = "Normal salida.";
-                break;
+                    tipo = "Normal salida.";
+                    break;
                 case 3:
-                tipo = "Extra entrada.";
-                break;
+                    tipo = "Extra entrada.";
+                    break;
                 case 4:
-                tipo = "Extra salida.";
-                break;
+                    tipo = "Extra salida.";
+                    break;
                 case 5:
-                tipo = "Bolsa horaria + entrada.";
-                break;
+                    tipo = "Bolsa horaria + entrada.";
+                    break;
                 case 6:
-                tipo = "Bolsa horaria + salida";
-                break;
+                    tipo = "Bolsa horaria + salida";
+                    break;
             }
-        } while (opcTipo == 0|| opcTipo > 6);
+        } while (opcTipo == 0 || opcTipo > 6);
         return tipo;
     }
 
+    // Función menú.
     private static void menu() {
         System.out.println("***************FICHAJE****************");
         System.out.println("1. Registrar entrada.");

@@ -1,22 +1,7 @@
-[
+
 *FICHAJE: 
--Nombre: Daniel
--Apellido: Morala
+-Nombre: Dani
+-Apellido: sadasd
 -ID: 33
--Tipo fichaje: Normal
--Fecha: 11-08-2020 07:08
-][
-*FICHAJE: 
--Nombre: Daniel
--Apellido: Morawer
--ID: 33
--Tipo fichaje: Normal
--Fecha: 11-08-2020 19:09
-][
-*FICHAJE: 
--Nombre: fyuuy
--Apellido: jpojp
--ID: 88
--Tipo fichaje: Extra
--Fecha: 11-08-2020 19:47
-]
+-Tipo fichaje: Normal entrada.
+-Fecha: 17-08-2020 19:51
